@@ -3,60 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Política de Privacidad - Proximity Shield</title>
+    <title>Privacy Policy - Proximity Shield</title>
     <style>
-        body { font-family: sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 20px; color: #333; }
-        h1 { color: #2c3e50; }
-        h2 { color: #2980b9; border-bottom: 1px solid #eee; padding-bottom: 10px; margin-top: 30px; }
+        /* Estilos Generales */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #f4f7f9;
+        }
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        /* Selector de Idioma */
+        .lang-switcher {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+        .lang-btn {
+            padding: 10px 20px;
+            border: 2px solid #2980b9;
+            background: white;
+            color: #2980b9;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        .lang-btn.active {
+            background: #2980b9;
+            color: white;
+        }
+        .lang-btn:hover {
+            background: #e1f0fa;
+        }
+        .lang-btn.active:hover {
+            background: #2471a3;
+        }
+
+        /* Control de visibilidad */
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+
+        /* Tipografía */
+        h1 { color: #2c3e50; text-align: center; font-size: 1.8rem; }
+        h2 { color: #2980b9; border-bottom: 2px solid #f0f0f0; padding-bottom: 8px; margin-top: 30px; }
+        .update-date { text-align: center; font-weight: bold; color: #7f8c8d; margin-bottom: 20px; }
         ul { padding-left: 20px; }
-        li { margin-bottom: 10px; }
-        .update-date { font-weight: bold; color: #7f8c8d; }
+        li { margin-bottom: 8px; }
+        strong { color: #2c3e50; }
+        .contact-box { background: #f8f9fa; padding: 15px; border-radius: 8px; border-left: 4px solid #2980b9; margin-top: 30px; }
     </style>
 </head>
 <body>
-    <h1>Política de Privacidad de Proximity Shield</h1>
-    <p class="update-date">Última actualización: Noviembre de 2026</p>
 
-    <p>En <strong>FK Technologies Studio</strong>, nos tomamos muy en serio tu privacidad. <strong>Proximity Shield</strong> está diseñada como una aplicación donde la privacidad es lo primero. Este documento explica cómo manejamos tus datos o, más exactamente, cómo garantizamos que tus datos sigan siendo tuyos.</p>
+    <div class="lang-switcher">
+        <button class="lang-btn active" onclick="setLanguage('es')">Español 🇪🇸</button>
+        <button class="lang-btn" onclick="setLanguage('en')">English 🇺🇸</button>
+    </div>
 
-    <h2>1. Principio Fundamental: Procesamiento 100% Local</h2>
-    <p>La función principal de Proximity Shield es medir la distancia entre tu rostro y la pantalla del dispositivo.</p>
-    <ul>
-        <li><strong>Sin Almacenamiento de Imágenes:</strong> La aplicación utiliza la cámara frontal para detectar rostros, pero <strong>nunca</strong> guarda, graba ni transmite fotos o vídeos.</li>
-        <li><strong>IA en el Dispositivo:</strong> Utilizamos <strong>Google ML Kit Face Detection</strong>. El análisis ocurre en tiempo real, puramente en la memoria volátil (RAM) del dispositivo. Una vez calculada la distancia, el fotograma de la imagen se descarta inmediatamente.</li>
-        <li><strong>Libre de Nube:</strong> Ningún dato visual sale nunca de tu dispositivo. No tenemos servidores que almacenen tu información biométrica o visual.</li>
-    </ul>
+    <div class="card">
+        <!-- SECCIÓN EN ESPAÑOL -->
+        <div id="es-content" class="lang-content active">
+            <h1>Política de Privacidad de Proximity Shield</h1>
+            <p class="update-date">Última actualización: Noviembre de 2026</p>
 
-    <h2>2. Permisos y su Propósito</h2>
-    <p>Para funcionar correctamente, la aplicación requiere permisos específicos:</p>
-    <ul>
-        <li><strong>Cámara:</strong> Se utiliza exclusivamente para la medición de distancia en tiempo real mediante ML Kit. El acceso solo está activo cuando el "Escudo" está habilitado.</li>
-        <li><strong>Mostrar sobre otras aplicaciones (Overlay):</strong> Necesario para mostrar alertas (como el Búho Guardián) sobre otras aplicaciones para advertirte cuando estás demasiado cerca.</li>
-        <li><strong>Notificaciones:</strong> Se utiliza para mostrar el estado del servicio en la barra de notificaciones, asegurando que sepas cuándo está activa la protección.</li>
-        <li><strong>Ignorar optimización de batería:</strong> Necesario para evitar que el sistema Android detenga el servicio en segundo plano, garantizando una protección ocular continua.</li>
-    </ul>
+            <p>En <strong>FK Technologies Studio</strong>, nos tomamos muy en serio tu privacidad. <strong>Proximity Shield</strong> está diseñada como una aplicación donde la privacidad es lo primero. Este documento explica cómo manejamos tus datos.</p>
 
-    <h2>3. Servicios de Terceros</h2>
-    <p>Utilizamos un número mínimo de servicios de terceros para garantizar la estabilidad de la aplicación:</p>
-    <ul>
-        <li><strong>Firebase Crashlytics:</strong> Recopilamos informes de errores <strong>anónimos</strong> y datos de rendimiento para corregir fallos. Estos datos no contienen información personal, fotos ni datos de ubicación.</li>
-        <li><strong>Google Play Services:</strong> Utilizado para los componentes de la biblioteca ML Kit.</li>
-    </ul>
+            <h2>1. Principio Fundamental: Procesamiento 100% Local</h2>
+            <p>La función principal de Proximity Shield es medir la distancia entre tu rostro y la pantalla del dispositivo.</p>
+            <ul>
+                <li><strong>Sin Almacenamiento de Imágenes:</strong> La aplicación utiliza la cámara frontal para detectar rostros, pero <strong>nunca</strong> guarda, graba ni transmite fotos o vídeos.</li>
+                <li><strong>IA en el Dispositivo:</strong> Utilizamos <strong>Google ML Kit Face Detection</strong>. El análisis ocurre en tiempo real en la memoria RAM. Una vez calculada la distancia, el fotograma se descarta inmediatamente.</li>
+                <li><strong>Libre de Nube:</strong> Ningún dato visual sale nunca de tu dispositivo. No tenemos servidores que almacenen tu información biométrica.</li>
+            </ul>
 
-    <h2>4. Privacidad de los Niños</h2>
-    <p>Proximity Shield es una herramienta a menudo utilizada por los padres para proteger la visión de sus hijos. Debido a que todo el procesamiento es local y no se recopilan datos personales, la aplicación es segura para los niños. No recopilamos a sabiendas ninguna información de identificación personal de niños.</p>
+            <h2>2. Permisos y su Propósito</h2>
+            <ul>
+                <li><strong>Cámara:</strong> Exclusivamente para medición de distancia en tiempo real.</li>
+                <li><strong>Superposición (Overlay):</strong> Para mostrar las alertas del Búho Guardián sobre otras apps.</li>
+                <li><strong>Notificaciones y Batería:</strong> Para asegurar que la protección no se detenga en segundo plano.</li>
+            </ul>
 
-    <h2>5. Retención de Datos</h2>
-    <p>Dado que no recopilamos datos personales, imágenes ni vídeos, no hay datos que retener. Cualquier ajuste de configuración (como la distancia de alerta preferida o el PIN parental) se almacena localmente en tu dispositivo.</p>
+            <h2>3. Servicios de Terceros</h2>
+            <ul>
+                <li><strong>Firebase Crashlytics:</strong> Informes de errores anónimos para mejorar la estabilidad. No contienen fotos ni datos personales.</li>
+                <li><strong>Google Play Services:</strong> Necesario para el funcionamiento de ML Kit.</li>
+            </ul>
 
-    <h2>6. Estado de "No Comerciante" (Non-trader)</h2>
-    <p>FK Technologies Studio está registrado como "No comerciante" en Google Play. La aplicación se proporciona para fines de salud y bienestar digital sin transacciones comerciales dentro de la aplicación.</p>
+            <h2>4. Privacidad de los Niños</h2>
+            <p>Proximity Shield es segura para los niños. No recopilamos ninguna información de identificación personal.</p>
 
-    <h2>7. Cambios en esta Política</h2>
-    <p>Podemos actualizar nuestra Política de Privacidad de vez en cuando. Te notificaremos cualquier cambio publicando la nueva Política de Privacidad en esta página y actualizando la fecha de "Última actualización".</p>
+            <div class="contact-box">
+                <strong>Contacto:</strong> fktechnologiesstudio@gmail.com
+            </div>
+        </div>
 
-    <h2>8. Contacto</h2>
-    <p>Si tienes alguna pregunta sobre esta Política de Privacidad, contacta con nosotros en:<br>
-    <strong>fktechnologiesstudio@gmail.com</strong></p>
+        <!-- SECCIÓN EN INGLÉS -->
+        <div id="en-content" class="lang-content">
+            <h1>Privacy Policy for Proximity Shield</h1>
+            <p class="update-date">Last Updated: November 2026</p>
+
+            <p>At <strong>FK Technologies Studio</strong>, we take your privacy seriously. <strong>Proximity Shield</strong> is designed as a privacy-first application. This document explains how we handle your data.</p>
+
+            <h2>1. Core Privacy Principle: 100% Local Processing</h2>
+            <p>The fundamental feature of Proximity Shield is measuring the distance between your face and the device screen.</p>
+            <ul>
+                <li><strong>No Image Storage:</strong> The application uses the front camera to detect faces, but it <strong>never</strong> saves, records, or transmits photos or videos.</li>
+                <li><strong>On-Device AI:</strong> We use <strong>Google ML Kit Face Detection</strong>. Analysis happens in real-time in RAM. Once the distance is calculated, the image frame is immediately discarded.</li>
+                <li><strong>Cloud-Free:</strong> No visual data ever leaves your device. We do not have servers that store your biometric or visual information.</li>
+            </ul>
+
+            <h2>2. Permissions and Their Purpose</h2>
+            <ul>
+                <li><strong>Camera:</strong> Used exclusively for real-time distance measurement.</li>
+                <li><strong>System Alert Window (Overlay):</strong> Necessary to display Guardian Owl alerts on top of other apps.</li>
+                <li><strong>Notifications & Battery:</strong> To ensure the background service provides continuous eye protection.</li>
+            </ul>
+
+            <h2>3. Third-Party Services</h2>
+            <ul>
+                <li><strong>Firebase Crashlytics:</strong> We collect anonymous crash reports. This data does not contain personal information, photos, or location data.</li>
+                <li><strong>Google Play Services:</strong> Used for the ML Kit library components.</li>
+            </ul>
+
+            <h2>4. Children's Privacy</h2>
+            <p>Proximity Shield is safe for children. We do not collect any personally identifiable information.</p>
+
+            <div class="contact-box">
+                <strong>Contact:</strong> fktechnologiesstudio@gmail.com
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function setLanguage(lang) {
+            // Ocultar todos los contenidos
+            document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
+            // Desactivar todos los botones
+            document.querySelectorAll('.lang-btn').forEach(el => el.classList.remove('active'));
+
+            // Mostrar el seleccionado
+            document.getElementById(lang + '-content').classList.add('active');
+            // Activar el botón correspondiente
+            event.currentTarget.classList.add('active');
+        }
+    </script>
+
 </body>
 </html>
