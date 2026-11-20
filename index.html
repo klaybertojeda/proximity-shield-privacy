@@ -1,35 +1,62 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Política de Privacidad - Proximity Shield</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidad - Proximity Shield</title>
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 20px; color: #333; }
+        h1 { color: #2c3e50; }
+        h2 { color: #2980b9; border-bottom: 1px solid #eee; padding-bottom: 10px; margin-top: 30px; }
+        ul { padding-left: 20px; }
+        li { margin-bottom: 10px; }
+        .update-date { font-weight: bold; color: #7f8c8d; }
+    </style>
 </head>
 <body>
-  <h1>Política de Privacidad – Proximity Shield</h1>
+    <h1>Política de Privacidad de Proximity Shield</h1>
+    <p class="update-date">Última actualización: Noviembre de 2026</p>
 
-  <p><strong>Última actualización:</strong> Marzo 19, 2026</p>
+    <p>En <strong>FK Technologies Studio</strong>, nos tomamos muy en serio tu privacidad. <strong>Proximity Shield</strong> está diseñada como una aplicación donde la privacidad es lo primero. Este documento explica cómo manejamos tus datos o, más exactamente, cómo garantizamos que tus datos sigan siendo tuyos.</p>
 
-  <h2>1. Información que NO recopilamos</h2>
-  <p>No recopilamos, almacenamos ni compartimos datos personales.</p>
+    <h2>1. Principio Fundamental: Procesamiento 100% Local</h2>
+    <p>La función principal de Proximity Shield es medir la distancia entre tu rostro y la pantalla del dispositivo.</p>
+    <ul>
+        <li><strong>Sin Almacenamiento de Imágenes:</strong> La aplicación utiliza la cámara frontal para detectar rostros, pero <strong>nunca</strong> guarda, graba ni transmite fotos o vídeos.</li>
+        <li><strong>IA en el Dispositivo:</strong> Utilizamos <strong>Google ML Kit Face Detection</strong>. El análisis ocurre en tiempo real, puramente en la memoria volátil (RAM) del dispositivo. Una vez calculada la distancia, el fotograma de la imagen se descarta inmediatamente.</li>
+        <li><strong>Libre de Nube:</strong> Ningún dato visual sale nunca de tu dispositivo. No tenemos servidores que almacenen tu información biométrica o visual.</li>
+    </ul>
 
-  <h2>2. Uso de la cámara</h2>
-  <p>La app utiliza la cámara frontal para medir la distancia del rostro en tiempo real.</p>
-  <p>No se almacenan imágenes ni se envían datos.</p>
+    <h2>2. Permisos y su Propósito</h2>
+    <p>Para funcionar correctamente, la aplicación requiere permisos específicos:</p>
+    <ul>
+        <li><strong>Cámara:</strong> Se utiliza exclusivamente para la medición de distancia en tiempo real mediante ML Kit. El acceso solo está activo cuando el "Escudo" está habilitado.</li>
+        <li><strong>Mostrar sobre otras aplicaciones (Overlay):</strong> Necesario para mostrar alertas (como el Búho Guardián) sobre otras aplicaciones para advertirte cuando estás demasiado cerca.</li>
+        <li><strong>Notificaciones:</strong> Se utiliza para mostrar el estado del servicio en la barra de notificaciones, asegurando que sepas cuándo está activa la protección.</li>
+        <li><strong>Ignorar optimización de batería:</strong> Necesario para evitar que el sistema Android detenga el servicio en segundo plano, garantizando una protección ocular continua.</li>
+    </ul>
 
-  <h2>3. Permisos</h2>
-  <ul>
-    <li>Cámara</li>
-    <li>Notificaciones</li>
-    <li>Overlay</li>
-  </ul>
+    <h2>3. Servicios de Terceros</h2>
+    <p>Utilizamos un número mínimo de servicios de terceros para garantizar la estabilidad de la aplicación:</p>
+    <ul>
+        <li><strong>Firebase Crashlytics:</strong> Recopilamos informes de errores <strong>anónimos</strong> y datos de rendimiento para corregir fallos. Estos datos no contienen información personal, fotos ni datos de ubicación.</li>
+        <li><strong>Google Play Services:</strong> Utilizado para los componentes de la biblioteca ML Kit.</li>
+    </ul>
 
-  <h2>4. Procesamiento</h2>
-  <p>Todo ocurre en el dispositivo. No usamos servidores.</p>
+    <h2>4. Privacidad de los Niños</h2>
+    <p>Proximity Shield es una herramienta a menudo utilizada por los padres para proteger la visión de sus hijos. Debido a que todo el procesamiento es local y no se recopilan datos personales, la aplicación es segura para los niños. No recopilamos a sabiendas ninguna información de identificación personal de niños.</p>
 
-  <h2>5. Compartición</h2>
-  <p>No compartimos datos.</p>
+    <h2>5. Retención de Datos</h2>
+    <p>Dado que no recopilamos datos personales, imágenes ni vídeos, no hay datos que retener. Cualquier ajuste de configuración (como la distancia de alerta preferida o el PIN parental) se almacena localmente en tu dispositivo.</p>
 
-  <h2>6. Contacto</h2>
-  <p>Email: fktechnologies.dev@gmail.com</p>
+    <h2>6. Estado de "No Comerciante" (Non-trader)</h2>
+    <p>FK Technologies Studio está registrado como "No comerciante" en Google Play. La aplicación se proporciona para fines de salud y bienestar digital sin transacciones comerciales dentro de la aplicación.</p>
+
+    <h2>7. Cambios en esta Política</h2>
+    <p>Podemos actualizar nuestra Política de Privacidad de vez en cuando. Te notificaremos cualquier cambio publicando la nueva Política de Privacidad en esta página y actualizando la fecha de "Última actualización".</p>
+
+    <h2>8. Contacto</h2>
+    <p>Si tienes alguna pregunta sobre esta Política de Privacidad, contacta con nosotros en:<br>
+    <strong>fktechnologiesstudio@gmail.com</strong></p>
 </body>
 </html>
